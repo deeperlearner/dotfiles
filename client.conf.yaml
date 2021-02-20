@@ -11,6 +11,7 @@
     ~/.config/ranger/rc.conf:
     ~/.gitconfig:
     ~/.inputrc:
+    ~/.ssh/config: ssh/config
     ~/.tmux_share.conf: tmux/share.conf
     ~/.tmux.conf: tmux/client.conf
     ~/.vim/coc-settings.json: vim/coc-settings.json
