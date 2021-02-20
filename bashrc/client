@@ -1,0 +1,17 @@
+source ~/.bashrc_share
+# Alias
+# Variable
+## Path
+### dir link
+export gdrive_path='/mnt/d/Google*雲端硬碟'
+export code_path="$gdrive_path/Programming"
+export git_path="$code_path/Github"
+export dot_path="$git_path/myrepo/Useful-Files/dotfiles"
+export DLCV_path="$gdrive_path/NTU/Courses/EE/DLCV/HW"
+export Pytorch_Template="$git_path/myrepo/Pytorch-Template"
+### torch
+export TORCH_HOME="$code_path/models"
+export PATH=$PATH:$Pytorch_Template
+
+export VISUAL=vim
+export EDITOR=vim

@@ -1,0 +1,22 @@
+source ~/.bashrc_share
+# Alias
+# Variable
+## Path
+### nvcc path
+export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export CUDA_HOME=/usr/local/cuda-10.0
+### virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Dev
+source ~/.local/bin/virtualenvwrapper.sh
+### dir link
+export code_path='/mnt/Data/peiying'
+export git_path="$code_path/Github"
+export dot_path="$git_path/myrepo/Useful-Files/dotfiles"
+export DLCV_path='/mnt/Data/peiying/Courses/DLCV/HW'
+export Pytorch_Template="$git_path/myrepo/Pytorch-Template"
+### torch
+export TORCH_HOME="$code_path/models"
+export PATH=$PATH:$Pytorch_Template

@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.bashrc_share: bashrc/share
+    ~/.bashrc_client: bashrc/client
+    ~/.config/ranger/rc.conf:
+    ~/.gitconfig:
+    ~/.inputrc:
+    ~/.tmux_share.conf: tmux/share.conf
+    ~/.tmux.conf: tmux/client.conf
+    ~/.vim/coc-settings.json: vim/coc-settings.json
+    ~/.vim/tabline.vim: vim/tabline.vim
+    ~/.vimrc: vim/vimrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
