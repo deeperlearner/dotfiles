@@ -5,7 +5,7 @@ for FILE in '.profile'; do
         if grep -q '^source ~/.append' "$HOME/$FILE"; then
             echo 'source has been added.'
         else
-            echo "source ~/.append/$FILE" >> "$HOME/$FILE"
+            echo -en "\nsource ~/.append/$FILE" >> "$HOME/$FILE"
         fi
     fi
 done
