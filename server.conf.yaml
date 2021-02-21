@@ -17,7 +17,6 @@
     ~/.vim/tabline.vim: vim/tabline.vim
     ~/.vimrc: vim/vimrc
     # exisiting dotfiles
-    ~/.append/.bashrc: append/bashrc
     ~/.append/.profile: append/profile
 
 - shell:
