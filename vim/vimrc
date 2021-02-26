@@ -28,7 +28,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" :CocInstall coc-python
+" :CocInstall coc-jedi
 Plug 'francoiscabrol/ranger.vim'
 Plug 'tpope/vim-obsession'
 Plug 'easymotion/vim-easymotion'
