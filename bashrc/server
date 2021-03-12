@@ -16,6 +16,7 @@ export code_path='/mnt/Data/peiying'
 export git_path="$code_path/Github/myrepo"
 export dot_path="$git_path/dotfiles"
 export DLCV_path='/mnt/Data/peiying/Courses/DLCV/HW'
+export NTUH_path="$git_path/unpublished/NTUH/"
 export Pytorch_Template="$git_path/Pytorch-Template"
 ### torch
 export TORCH_HOME="$code_path/models"
