@@ -20,4 +20,3 @@ export NTUH_path="$git_path/unpublished/NTUH/"
 export Pytorch_Template="$git_path/Pytorch-Template"
 ### torch
 export TORCH_HOME="$code_path/models"
-export PATH=$PATH:$Pytorch_Template

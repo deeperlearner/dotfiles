@@ -27,6 +27,7 @@ source ~/.vim/tabline.vim
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " :CocInstall coc-jedi
 Plug 'francoiscabrol/ranger.vim'
