@@ -1,21 +1,33 @@
 syntax on
 
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set backspace=indent,eol,start
-set nu
-set rnu
+" line
+set number
+set relativenumber
 set nowrap
-set smartcase
+
+" tab
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set smartindent " autoindent/smartindent
+
+" others
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
+set backspace=indent,eol,start " 'backspace'
+
+" search
+" set ignorecase
+" set smartcase
 set incsearch
 set hlsearch
+
+" clipboard
 set pastetoggle=<F2>
 set clipboard=unnamed
+
 " set mouse=a
 source ~/.vim/tabline.vim
 
@@ -27,7 +39,9 @@ source ~/.vim/tabline.vim
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
-" Plug 'jiangmiao/auto-pairs'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'jiangmiao/auto-pairs'
+" Plug 'cohama/lexima.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " :CocInstall coc-jedi
 Plug 'francoiscabrol/ranger.vim'
