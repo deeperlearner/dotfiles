@@ -7,17 +7,17 @@
 
 - link:
     ~/.bashrc_share: bashrc/share
-    ~/.bashrc_server: bashrc/server
     ~/.config/ranger/rc.conf:
     ~/.gitconfig:
     ~/.inputrc:
     ~/.tmux_share.conf: tmux/share.conf
-    ~/.tmux.conf: tmux/server.conf
+    ~/.tmux.conf: tmux/client.conf
     ~/.vim/coc-settings.json: vim/coc-settings.json
     ~/.vim/tabline.vim: vim/tabline.vim
     ~/.vimrc: vim/vimrc
-    # exisiting dotfiles
-    ~/.append/.profile: append/profile
+    # files appending
+    ~/.bashrc_append: bashrc/client
+    ~/.profile_append: profile_append
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

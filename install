@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#./install -c <client/server>.conf.yaml
+#./install -c configs/*.conf.yaml
 
 set -e
 

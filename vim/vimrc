@@ -69,11 +69,14 @@ augroup END
 let mapleader = " "
 
 " nnoremap <leader>b :ls<CR>:b
+" comment for python
+nnoremap <C-_> I# <esc>
+xnoremap <C-_> I# <esc>
+" vertical colorcolumn
 nnoremap <silent><leader>c :<C-u>let &l:cc = &l:cc =~# '[0-9]' ? '' : col('.')<CR>
-" nnoremap <silent><leader>c :execute 'set colorcolumn=' . col('.')<CR>
+" others
 nnoremap <leader>l :redr!<CR>
 nnoremap <leader>n :noh<CR>
-nnoremap <leader>r :!clear;python3 %<CR>
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
