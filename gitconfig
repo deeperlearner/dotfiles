@@ -1,3 +1,11 @@
+[alias]
+    st = status
+    aa = add -A
+    save = commit -a -m "Save"
+    br = branch -vv
+    co = checkout
+    gr = log --all --graph --decorate
+
 [user]
 	email = b04202035@g.ntu.edu.tw
 	name = deeperlearner

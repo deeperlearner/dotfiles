@@ -34,20 +34,23 @@ source ~/.vim/tabline.vim
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-" Plugins are sorted by importance
 " reference: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'jiangmiao/auto-pairs'
-" Plug 'cohama/lexima.vim'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " :CocInstall coc-jedi
-Plug 'francoiscabrol/ranger.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'Vimjas/vim-python-pep8-indent'
+
 Plug 'tpope/vim-obsession'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+
 Plug 'easymotion/vim-easymotion'
-"Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 
 call plug#end()
 " :w<CR>:so %<CR>
@@ -68,7 +71,7 @@ augroup END
 
 let mapleader = " "
 
-" nnoremap <leader>b :ls<CR>:b
+nnoremap <leader>b :ls<CR>:b
 " comment for python
 nnoremap <C-_> I# <esc>
 xnoremap <C-_> I# <esc>
@@ -119,6 +122,10 @@ inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float
 "let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " d/file.txt
 "let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 "let g:airline#extensions#tabline#buffer_idx_mode = 1 " buffer number
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlPMRU'
 
 " EasyMotion
 map <BSlash> <Plug>(easymotion-prefix)
