@@ -44,6 +44,9 @@ if exists("+showtabline")
       let i = i + 1
     endwhile
     let s .= '%T%#TabLineFill#%='
+    if exists(':Obsession')
+        let s .= '%{ObsessionStatus()}'
+    endif
     let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
     return s
   endfunction
