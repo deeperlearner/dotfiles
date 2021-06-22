@@ -26,7 +26,7 @@ set hlsearch
 
 " clipboard
 set pastetoggle=<F2>
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " set mouse=a
 source ~/.vim/tabline.vim
