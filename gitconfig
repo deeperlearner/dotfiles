@@ -1,6 +1,8 @@
 [alias]
     st = status
     aa = add -A
+    ca = commit -a
+    caa = commit -a --amend --date=now
     save = commit -a -m "Save"
     br = branch -vv
     co = checkout

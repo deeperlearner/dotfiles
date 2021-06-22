@@ -1,7 +1,6 @@
 # Alias
 alias python='python3'
 alias pip='python3 -m pip'
-alias jn=jupyter-notebook
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias watch_nv='watch -n 1 nvidia-smi'
@@ -10,7 +9,7 @@ alias rr='. ranger'
 alias lh='ls -lh'
 
 # prompt
-PROMPT_DIRTRIM=2
+PROMPT_DIRTRIM=3
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
