@@ -4,51 +4,51 @@ syntax on
 set number
 set relativenumber
 set nowrap
-
 " tab
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set smartindent " autoindent/smartindent
-
 " others
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set backspace=indent,eol,start " 'backspace'
-
 " search
 " set ignorecase
 " set smartcase
 set incsearch
 set hlsearch
-
 " clipboard
 set pastetoggle=<F2>
-set clipboard=unnamed
-
+" set clipboard=unnamedplus
 " set mouse=a
 source ~/.vim/tabline.vim
-
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " reference: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
+" vim make up
+"Plug 'kana/vim-fakeclip'
+" obsolete for vim 8.2.2345
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'roxma/vim-tmux-clipboard'
+Plug 'tpope/vim-obsession'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
+" coding enhancement
+Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " :CocInstall coc-jedi
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'Vimjas/vim-python-pep8-indent'
 
-Plug 'tpope/vim-obsession'
-Plug 'francoiscabrol/ranger.vim'
-Plug 'ctrlpvim/ctrlp.vim'
-
+" misc
 Plug 'easymotion/vim-easymotion'
 " Plug 'vim-airline/vim-airline'
 
@@ -103,9 +103,17 @@ inoremap <M-e> <C-o>$
 " tabpage
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
-" ranger.vim
-" let g:ranger_map_keys = 0
-" nmap <leader>f :RangerWorkingDirectory<CR>
+" lineput
+nnoremap <leader>p :pu<CR>
+nnoremap <leader>P :pu!<CR>
+
+" plugin settings
+" ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_cmd = 'CtrlPMRU'
+"" ranger.vim
+"let g:ranger_map_keys = 0
+"nmap <leader>f :RangerWorkingDirectory<CR>
 
 " coc.nvim
 "let g:coc_disable_startup_warning = 1
@@ -117,17 +125,12 @@ nmap <silent> gr <Plug>(coc-references)
 inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
 inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 
+" vim-easymotion
+map <BSlash> <Plug>(easymotion-prefix)
 "" vim-airline
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " d/file.txt
 "let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 "let g:airline#extensions#tabline#buffer_idx_mode = 1 " buffer number
-
-" CtrlP
-let g:ctrlp_map = '<c-p>'
-" let g:ctrlp_cmd = 'CtrlPMRU'
-
-" EasyMotion
-map <BSlash> <Plug>(easymotion-prefix)
 
 " :w<CR>:so %<CR>

@@ -6,19 +6,17 @@
 - clean: ['~']
 
 - link:
-    ~/.bashrc_share: bashrc/share
     ~/.config/ranger/rc.conf:
     ~/.gitconfig:
     ~/.inputrc:
-    ~/.tmux_share.conf: tmux/share.conf
-    ~/.tmux.conf: tmux/server.conf
+    ~/.tmux.conf:
     ~/.vim/coc-settings.json: vim/coc-settings.json
     ~/.vim/tabline.vim: vim/tabline.vim
-    ~/.vimrc: vim/vimrc
-    # files appending
-    ~/.bashrc_append: bashrc/server
-    ~/.profile_append: profile_append
+    ~/.vimrc:
+    # append source ~/*
+    ~/.bashrc_global: bashrc
+    ~/.profile_global: profile
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [./append.sh, Appending symlinks for exisiting files]
+  - [./sourceror.sh, Appending `source ~/*` for exisiting files]

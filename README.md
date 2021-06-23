@@ -1,5 +1,5 @@
 # dotfiles
-Reconstructs dotfiles settings.
+dotfiles, global settings
 
 # install
-`./install -c configs/*.conf.yaml`
+`./install -c .install.conf.yaml`
