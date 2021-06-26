@@ -1,20 +1,8 @@
-# Alias
-alias python='python3'
-alias pip='python3 -m pip'
-alias update='sudo apt-get update'
-alias upgrade='sudo apt-get upgrade'
-alias watch_nv='watch -n 1 nvidia-smi'
-alias view_history='less /var/log/apt/history.log'
-alias rr='. ranger'
-alias lh='ls -lh'
+# Aliases
+source ~/.shell/aliases.sh
 
-# prompt
-PROMPT_DIRTRIM=3
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;36m\]$(parse_git_branch)\[\033[00m\]\$ '
+# Custom prompt
+source ~/.bash/prompt.bash
 
-# default editor
-export VISUAL=vim
-export EDITOR=vim
+# Settings
+source ~/.bash/settings.bash

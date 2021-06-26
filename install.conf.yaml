@@ -6,9 +6,11 @@
 - clean: ['~']
 
 - link:
+    ~/.bash:
     ~/.config/ranger/rc.conf:
     ~/.gitconfig:
     ~/.inputrc:
+    ~/.shell:
     ~/.tmux.conf:
     ~/.vim/coc-settings.json: vim/coc-settings.json
     ~/.vim/tabline.vim: vim/tabline.vim

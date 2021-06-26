@@ -74,7 +74,6 @@ let mapleader = " "
 nnoremap <leader>b :ls<CR>:b
 " comment for python
 nnoremap <C-_> I# <esc>
-xnoremap <C-_> I# <esc>
 " vertical colorcolumn
 nnoremap <silent><leader>c :<C-u>let &l:cc = &l:cc =~# '[0-9]' ? '' : col('.')<CR>
 " others
@@ -97,6 +96,9 @@ nnoremap <M-x> <C-x>
 " jump forward/backward
 nnoremap <M-o> <C-o>
 nnoremap <M-i> <C-i>
+" save change before deletions
+inoremap <C-u> <C-g>u<C-u>
+"inoremap <C-w> <C-g>u<C-w>
 " home/end
 inoremap <M-a> <C-o>0
 inoremap <M-e> <C-o>$
@@ -126,7 +128,7 @@ inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float
 inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 
 " vim-easymotion
-map <BSlash> <Plug>(easymotion-prefix)
+"map <BSlash> <Plug>(easymotion-prefix)
 "" vim-airline
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " d/file.txt
