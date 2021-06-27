@@ -1,15 +1,23 @@
 #!/bin/bash
 
-for FILE in .bashrc .profile
-do
+Append () {
     if [ -e "$HOME/$FILE" ]; then
-        if grep -q "^source ~/${FILE}_global" "$HOME/$FILE"; then
-            echo 'Source has already been added.'
+        if grep -q "^$1 ~/${FILE}.d/*" "$HOME/$FILE"; then
+            echo "$1 has already been added."
         else
-            echo -en "\nsource ~/${FILE}_global" >> "$HOME/$FILE"
+            echo -en "\n$1 ~/${FILE}.d/*" >> "$HOME/$FILE"
         fi
     else
         echo "File $HOME/$FILE does not exist. Create a new one."
-        echo -en "\nsource ~/${FILE}_global" >> "$HOME/$FILE"
+        echo -en "\n$1 ~/${FILE}.d/*" >> "$HOME/$FILE"
     fi
+}
+
+for FILE in .bashrc .profile
+do
+    Append "source"
+done
+for FILE in .ssh/config
+do
+    Append "Include"
 done

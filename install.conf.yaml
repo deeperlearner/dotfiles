@@ -15,10 +15,11 @@
     ~/.vim/coc-settings.json: vim/coc-settings.json
     ~/.vim/tabline.vim: vim/tabline.vim
     ~/.vimrc:
-    # append source ~/*
-    ~/.bashrc_global: bashrc
-    ~/.profile_global: profile
+    # append
+    ~/.bashrc.d/.bashrc_global: bashrc
+    ~/.profile.d/.profile_global: profile
+    ~/.ssh/config.d/config_global: config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [./sourceror.sh, Appending `source ~/*` for exisiting files]
+  - [./sourceror.sh, Appending `source/Include ~/*.d` for exisiting files]

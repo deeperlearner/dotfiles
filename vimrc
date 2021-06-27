@@ -35,7 +35,13 @@ source ~/.vim/tabline.vim
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-" reference: https://github.com/junegunn/vim-plug
+" [vim-pug](https://github.com/junegunn/vim-plug)
+" automatically install vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 " vim make up
