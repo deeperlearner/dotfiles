@@ -22,4 +22,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [./sourceror.sh, Appending `source/Include ~/*.d` for exisiting files]
+  - [./sourceror.sh, Appending sourcer on exisiting files]
