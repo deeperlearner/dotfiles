@@ -1,5 +1,12 @@
 syntax on
 
+" highlight current line, but only in active window
+augroup CursorLineOnlyInActiveWindow
+    autocmd!
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+augroup END
+
 " line
 set number
 set relativenumber
@@ -62,12 +69,6 @@ set background=dark
 set t_ut=""
 set term=screen-256color
 set timeoutlen=1000 ttimeoutlen=50
-" set cursorline
-augroup CursorLine
-    au!
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
-augroup END
 
 let mapleader = " "
 
@@ -126,6 +127,12 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
 inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+" vim-surround
+" type yss- would work
+" Code block for markdown
+ autocmd FileType markdown let b:surround_45 = "```\n\r\n```"
+" Block comment for python
+ autocmd FileType python let b:surround_45 = "\"\"\"\n\r\n\"\"\""
 
 " vim-easymotion
 "map <BSlash> <Plug>(easymotion-prefix)
