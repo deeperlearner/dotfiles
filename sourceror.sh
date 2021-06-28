@@ -17,7 +17,3 @@ for FILE in .bashrc .profile
 do
     Append "source ~/${FILE}.d/${FILE}_global"
 done
-for FILE in .ssh/config
-do
-    Append "Include ~/${FILE}.d/*" 
-done
