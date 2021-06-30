@@ -45,7 +45,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " vim make up
-"Plug 'kana/vim-fakeclip'
+" Plug 'kana/vim-fakeclip'
 " obsolete for vim 8.2.2345
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
@@ -60,9 +60,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'tpope/vim-commentary'
 
 " misc
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 " Plug 'vim-airline/vim-airline'
 
 call plug#end()
@@ -79,8 +80,6 @@ set timeoutlen=1000 ttimeoutlen=50
 let mapleader = " "
 
 nnoremap <leader>b :ls<CR>:b
-" comment for python
-nnoremap <C-_> I# <esc>
 " vertical colorcolumn
 nnoremap <silent><leader>c :<C-u>let &l:cc = &l:cc =~# '[0-9]' ? '' : col('.')<CR>
 " others
@@ -105,7 +104,7 @@ nnoremap <M-o> <C-o>
 nnoremap <M-i> <C-i>
 " save change before deletions
 inoremap <C-u> <C-g>u<C-u>
-"inoremap <C-w> <C-g>u<C-w>
+" inoremap <C-w> <C-g>u<C-w>
 " home/end
 inoremap <M-a> <C-o>0
 inoremap <M-e> <C-o>$
@@ -119,13 +118,13 @@ nnoremap <leader>P :pu!<CR>
 " plugin settings
 " ctrlp.vim
 let g:ctrlp_map = '<c-p>'
-"let g:ctrlp_cmd = 'CtrlPMRU'
-"" ranger.vim
-"let g:ranger_map_keys = 0
-"nmap <leader>f :RangerWorkingDirectory<CR>
+" let g:ctrlp_cmd = 'CtrlPMRU'
+" " ranger.vim
+" let g:ranger_map_keys = 0
+" nmap <leader>f :RangerWorkingDirectory<CR>
 
 " coc.nvim
-"let g:coc_disable_startup_warning = 1
+" let g:coc_disable_startup_warning = 1
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -136,16 +135,18 @@ inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float
 " vim-surround
 " type yss- would work
 " Code block for markdown
- autocmd FileType markdown let b:surround_45 = "```\n\r\n```"
+autocmd FileType markdown let b:surround_45 = "```\n\r\n```"
 " Block comment for python
- autocmd FileType python let b:surround_45 = "\"\"\"\n\r\n\"\"\""
+autocmd FileType python let b:surround_45 = "\"\"\"\n\r\n\"\"\""
+" vim-commentary
+" autocmd FileType <filetype> setlocal commentstring=#\ %s
 
 " vim-easymotion
-"map <BSlash> <Plug>(easymotion-prefix)
-"" vim-airline
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " d/file.txt
-"let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
-"let g:airline#extensions#tabline#buffer_idx_mode = 1 " buffer number
+" map <BSlash> <Plug>(easymotion-prefix)
+" " vim-airline
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " d/file.txt
+" let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+" let g:airline#extensions#tabline#buffer_idx_mode = 1 " buffer number
 
 " :w<CR>:so %<CR>
