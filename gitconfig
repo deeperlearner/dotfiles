@@ -11,3 +11,10 @@
 [user]
 	email = b04202035@g.ntu.edu.tw
 	name = deeperlearner
+
+[core]
+    excludesfile = ~/.gitignore_global
+
+# Allow local customizations in the .gitconfig_local file
+[include]
+	path = ~/.gitconfig_local

@@ -28,7 +28,7 @@ set backspace=indent,eol,start " 'backspace'
 set incsearch
 set hlsearch
 " clipboard
-set pastetoggle=<F2>
+set pastetoggle=<F2> " set paste
 " set clipboard=unnamedplus
 " set mouse=a
 source ~/.vim/tabline.vim

@@ -9,6 +9,7 @@
     ~/.bash:
     ~/.config/ranger/rc.conf:
     ~/.gitconfig:
+    ~/.gitignore_global:
     ~/.inputrc:
     ~/.shell:
     ~/.tmux.conf:
