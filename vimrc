@@ -44,8 +44,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" vim make up
-" Plug 'kana/vim-fakeclip'
+" vim enhancement
 " obsolete for vim 8.2.2345
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
@@ -61,6 +60,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 
 " misc
 " Plug 'easymotion/vim-easymotion'
