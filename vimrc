@@ -118,7 +118,7 @@ nnoremap <leader>P :pu!<CR>
 " plugin settings
 " ctrlp.vim
 let g:ctrlp_map = '<c-p>'
-" let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 " " ranger.vim
 " let g:ranger_map_keys = 0
 " nmap <leader>f :RangerWorkingDirectory<CR>
