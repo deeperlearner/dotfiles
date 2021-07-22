@@ -49,6 +49,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tpope/vim-obsession'
+
+" file manager
 " Plug 'francoiscabrol/ranger.vim'
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
@@ -81,7 +83,7 @@ set timeoutlen=1000 ttimeoutlen=50
 
 let mapleader = " "
 
-nnoremap <leader>b :ls<CR>:b
+" nnoremap <leader>b :ls<CR>:b
 " vertical colorcolumn
 nnoremap <silent><leader>c :<C-u>let &l:cc = &l:cc =~# '[0-9]' ? '' : col('.')<CR>
 " others
@@ -120,10 +122,8 @@ nnoremap <leader>P :pu!<CR>
 " plugin settings
 " ctrlp.vim
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPBuffer'
-" " ranger.vim
-" let g:ranger_map_keys = 0
-" nmap <leader>f :RangerWorkingDirectory<CR>
+" let g:ctrlp_cmd = 'CtrlPBuffer'
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " coc.nvim
 " let g:coc_disable_startup_warning = 1
@@ -135,7 +135,7 @@ nmap <silent> gr <Plug>(coc-references)
 inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
 inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 " vim-surround
-" type yss- would work
+" e.g. yss-
 " Code block for markdown
 autocmd FileType markdown let b:surround_45 = "```\n\r\n```"
 " Block comment for python
