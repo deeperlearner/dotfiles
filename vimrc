@@ -29,6 +29,10 @@ set incsearch
 set hlsearch
 " clipboard
 set pastetoggle=<F2> " set paste
+" mouse
+set mouse=nv
+map <F3> <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
+
 " set clipboard=unnamedplus
 " set mouse=a
 source ~/.vim/tabline.vim
