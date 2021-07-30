@@ -1,6 +1,7 @@
 [alias]
     st = status
     aa = add -A
+    df = diff
     ca = commit -a
     caa = commit -a --amend --date=now
     save = commit -a -m "Save"
