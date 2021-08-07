@@ -66,9 +66,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " :CocInstall coc-jedi
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'Vimjas/vim-python-pep8-indent'
 
 " misc
 " Plug 'easymotion/vim-easymotion'
@@ -76,6 +76,7 @@ Plug 'tpope/vim-fugitive'
 
 call plug#end()
 " :w<CR>:so %<CR>
+" :PlugClean
 " :PlugInstall
 " :PlugUpdate
 
