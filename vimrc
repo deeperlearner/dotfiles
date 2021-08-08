@@ -124,6 +124,8 @@ nnoremap <S-Tab> gT
 nnoremap <leader>p :pu<CR>
 nnoremap <leader>P :pu!<CR>
 
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+
 " plugin settings
 " ctrlp.vim
 let g:ctrlp_map = '<c-p>'
