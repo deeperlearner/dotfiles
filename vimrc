@@ -127,6 +127,11 @@ nnoremap <leader>P :pu!<CR>
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 " plugin settings
+" lf.vim
+nnoremap <leader>w :LfWorkingDirectory<CR>
+let g:lf_width = 1.0
+let g:lf_height = 1.0
+
 " ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlPBuffer'
@@ -141,17 +146,20 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
 inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+
 " vim-surround
 " e.g. yss-
 " Code block for markdown
 autocmd FileType markdown let b:surround_45 = "```\n\r\n```"
 " Block comment for python
 autocmd FileType python let b:surround_45 = "\"\"\"\n\r\n\"\"\""
+
 " vim-commentary
 " autocmd FileType <filetype> setlocal commentstring=#\ %s
 
 " vim-easymotion
 " map <BSlash> <Plug>(easymotion-prefix)
+
 " " vim-airline
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " d/file.txt
