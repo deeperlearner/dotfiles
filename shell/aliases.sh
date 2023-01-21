@@ -1,5 +1,5 @@
-alias python='python3.7'
-alias pip='python3.7 -m pip'
+# alias python='python3.7'
+# alias pip='python3.7 -m pip'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias watch_nv='watch -n 1 nvidia-smi'
