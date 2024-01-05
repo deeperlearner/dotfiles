@@ -62,7 +62,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 " coding enhancement
 Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " :CocInstall coc-jedi
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
@@ -85,6 +85,7 @@ set background=dark
 set t_ut=""
 set term=screen-256color
 set timeoutlen=1000 ttimeoutlen=50
+source $VIMRUNTIME/defaults.vim
 
 let mapleader = " "
 
@@ -99,24 +100,24 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-" i_CTRL-V: Alt+<char> results in ^[<char>
-execute "set <M-a>=a"
-execute "set <M-e>=e"
-execute "set <M-i>=i"
-execute "set <M-o>=o"
-execute "set <M-x>=x"
-" number +/-
-nnoremap <M-a> <C-a>
-nnoremap <M-x> <C-x>
-" jump forward/backward
-nnoremap <M-o> <C-o>
-nnoremap <M-i> <C-i>
-" save change before deletions
-inoremap <C-u> <C-g>u<C-u>
-" inoremap <C-w> <C-g>u<C-w>
-" home/end
-inoremap <M-a> <C-o>0
-inoremap <M-e> <C-o>$
+" " i_CTRL-V: Alt+<char> results in ^[<char>
+" execute "set <M-a>=a"
+" execute "set <M-e>=e"
+" execute "set <M-i>=i"
+" execute "set <M-o>=o"
+" execute "set <M-x>=x"
+" " number +/-
+" nnoremap <M-a> <C-a>
+" nnoremap <M-x> <C-x>
+" " jump forward/backward
+" nnoremap <M-o> <C-o>
+" nnoremap <M-i> <C-i>
+" " save change before deletions
+" inoremap <C-u> <C-g>u<C-u>
+" " inoremap <C-w> <C-g>u<C-w>
+" " home/end
+" inoremap <M-a> <C-o>0
+" inoremap <M-e> <C-o>$
 " tabpage
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
@@ -137,15 +138,15 @@ let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlPBuffer'
 nnoremap <leader>b :CtrlPBuffer<CR>
 
-" coc.nvim
-" let g:coc_disable_startup_warning = 1
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+" " coc.nvim
+" " let g:coc_disable_startup_warning = 1
+" " GoTo code navigation.
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
+" inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+" inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 
 " vim-surround
 " e.g. yss-
