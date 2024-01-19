@@ -7,6 +7,8 @@ alias view_history='less /var/log/apt/history.log'
 alias rr='. ranger'
 alias lh='ls -lh'
 alias cloc_git='cloc --vcs=git --by-file'
+export pytorch_template="$HOME/pytorch-template"
+alias torch_new_project='$pytorch_template/scripts/new_project/torch_new_project.sh'
 
 # show each submodules ahead or behind commits
 gss_command='git -c color.status=always status -s | \
