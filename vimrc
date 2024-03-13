@@ -124,6 +124,9 @@ nnoremap <S-Tab> gT
 " lineput
 nnoremap <leader>p :pu<CR>
 nnoremap <leader>P :pu!<CR>
+" paste
+nnoremap <leader>t :set paste<CR>
+nnoremap <leader>T :set paste!<CR>
 
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 

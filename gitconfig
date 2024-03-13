@@ -10,7 +10,7 @@
     gr = log --all --graph --decorate
 
 [user]
-	email = b04202035@g.ntu.edu.tw
+	email = peiyingliu.phys@gmail.com
 	name = deeperlearner
 
 [core]
