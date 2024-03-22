@@ -57,7 +57,7 @@ Plug 'tpope/vim-obsession'
 " file manager
 " Plug 'francoiscabrol/ranger.vim'
 Plug 'ptzz/lf.vim'
-Plug 'voldikss/vim-floaterm'
+" Plug 'voldikss/vim-floaterm'
 Plug 'ctrlpvim/ctrlp.vim'
 
 " coding enhancement
@@ -83,9 +83,9 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 set t_ut=""
-set term=screen-256color
+" set term=screen-256color
 set timeoutlen=1000 ttimeoutlen=50
-source $VIMRUNTIME/defaults.vim
+" source $VIMRUNTIME/defaults.vim
 
 let mapleader = " "
 
@@ -127,6 +127,8 @@ nnoremap <leader>P :pu!<CR>
 " paste
 nnoremap <leader>t :set paste<CR>
 nnoremap <leader>T :set paste!<CR>
+" source ~/.vimrc
+nnoremap <leader>v :so ~/.vimrc<CR>
 
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 

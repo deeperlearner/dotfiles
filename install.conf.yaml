@@ -10,6 +10,9 @@
     ~/.config/lf/lfcd.sh:
     ~/.config/lf/lfrc:
     ~/.config/ranger/rc.conf:
+    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/nvim/lua/plugins: nvim/lua/plugins
+    ~/.config/nvim/lua/init.lua: nvim/lua/init.lua
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.inputrc:
