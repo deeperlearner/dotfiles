@@ -3,3 +3,4 @@ let &packpath = &runtimepath
 source ~/.vimrc
 
 lua require('init')
+lua require('packer').install()

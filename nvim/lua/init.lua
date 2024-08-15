@@ -15,8 +15,10 @@ require('packer').startup(function()
         requires = {{'nvim-lua/plenary.nvim'}, {'nvim-treesitter/nvim-treesitter'}}
     }
 
-    use {
-        'voldikss/vim-floaterm'
-    }
+    use 'voldikss/vim-floaterm'
+
+    use 'ThePrimeagen/vim-be-good'
 end)
 -- run `:lua require('packer').install()`
+-- :PackerInstall
+-- :PackerUpdate
