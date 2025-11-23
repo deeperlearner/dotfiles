@@ -48,6 +48,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Copilot
+Plug 'github/copilot.vim'
 " vim enhancement
 " obsolete for vim 8.2.2345
 Plug 'tmux-plugins/vim-tmux-focus-events'
